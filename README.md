@@ -16,6 +16,8 @@ COMANDOS
 ```bash
 docker compose up -d
 docker compose down
+docker ps
+docker image ls
 Invoke-WebRequest http://localhost:3001
 Invoke-WebRequest http://localhost:3002
 ```
