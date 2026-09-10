@@ -2,20 +2,19 @@ version: '3.8'
 services:
   api01:
     container_name: api01
-    image: nmatsui/hello-world-api:0.1.1 
+    image: ./api
     ports:
       - "3000:3000"
   api02:
     container_name: api02
-    image: nmatsui/hello-world-api:0.1.1
+    image: ./api
+    environment:
+      - MESSAGE= "Jhosep Narvaez"
     ports:
       - "3001:3000"
   db:
-    container_name: db
     image: postgres:13
     environment:
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
       POSTGRES_DB: mydatabase
-    ports:
-      - "5432:5432"
