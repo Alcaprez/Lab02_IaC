@@ -1,0 +1,19 @@
+services:
+  api01:
+  container_name: api01
+  image: nmatsui/hello-world-api:0.1.1
+  ports:
+    - "3000:3000"
+  
+  api02:
+    container_name: api02
+    image: nmatsui/hello-world-api:0.1.1
+    ports:
+      - "3001:3000"
+  
+  db:
+    image: postgres:15.3-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
