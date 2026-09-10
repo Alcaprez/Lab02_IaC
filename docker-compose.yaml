@@ -2,12 +2,12 @@ version: '3.8'
 services:
   api01:
     container_name: api01
-    image: ./api
+    build:: ./api
     ports:
       - "3000:3000"
   api02:
     container_name: api02
-    image: ./api
+    build: ./api
     environment:
       - MESSAGE= "Jhosep Narvaez"
     ports:
